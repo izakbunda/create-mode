@@ -57,6 +57,8 @@ function resetAll() {
 }
 
 async function exportImage() {
+  await document.fonts.load('700 32px "Poppins"');
+
   const width = window.innerWidth;
   const height = window.innerHeight;
   const dpr = window.devicePixelRatio || 1;
@@ -87,7 +89,7 @@ async function exportImage() {
   if (text) {
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
-    ctx.font = "700 32px -apple-system, BlinkMacSystemFont, Helvetica Neue, Arial, sans-serif";
+    ctx.font = "700 32px Poppins, -apple-system, BlinkMacSystemFont, Helvetica Neue, Arial, sans-serif";
     ctx.fillStyle = "#ffffff";
     ctx.shadowColor = "rgba(0, 0, 0, 0.35)";
     ctx.shadowBlur = 6;
