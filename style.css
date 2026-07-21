@@ -1,0 +1,113 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #000;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+}
+
+#stage {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+  transition: background 0.2s ease;
+  overflow: hidden;
+}
+
+#text-display {
+  max-width: 85%;
+  text-align: center;
+  color: #fff;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.3;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.35);
+  white-space: pre-wrap;
+  word-break: break-word;
+  pointer-events: none;
+  user-select: none;
+}
+
+#text-input {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  pointer-events: none;
+  border: none;
+  outline: none;
+  background: transparent;
+  resize: none;
+}
+
+#swatch-strip {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 90px;
+  height: 56px;
+  display: flex;
+  gap: 12px;
+  padding: 0 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  z-index: 5;
+}
+
+#swatch-strip::-webkit-scrollbar {
+  display: none;
+}
+
+.swatch {
+  flex: 0 0 auto;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  scroll-snap-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.swatch.active {
+  border-color: #fff;
+  box-shadow: 0 0 0 2px #fff, 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+#controls {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  z-index: 5;
+}
+
+#controls button {
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 20px;
+  padding: 10px 22px;
+  backdrop-filter: blur(6px);
+}
+
+#controls button:active {
+  background: rgba(255, 255, 255, 0.3);
+}
