@@ -1,16 +1,13 @@
-// Placeholder curated set of Instagram-style gradients.
-// TODO: swap in exact color stops once reference photos are provided.
 const GRADIENTS = [
-  { id: "sunset", angle: 135, stops: ["#833ab4", "#fd1d1d", "#fcb045"] },
-  { id: "dusk", angle: 135, stops: ["#4776e6", "#8e54e9"] },
-  { id: "candy", angle: 135, stops: ["#ee0979", "#ff6a00"] },
-  { id: "ocean", angle: 135, stops: ["#00c6ff", "#0072ff"] },
-  { id: "mint", angle: 135, stops: ["#11998e", "#38ef7d"] },
-  { id: "berry", angle: 135, stops: ["#c31432", "#240b36"] },
-  { id: "peach", angle: 135, stops: ["#ff9a9e", "#fecfef"] },
-  { id: "night", angle: 135, stops: ["#0f2027", "#203a43", "#2c5364"] },
-  { id: "flame", angle: 135, stops: ["#f12711", "#f5af19"] },
-  { id: "grape", angle: 135, stops: ["#654ea3", "#eaafc8"] },
+  {
+    id: "rainbow",
+    angle: 150,
+    stops: ["#d9f24a", "#00d672", "#00aeef", "#ff8a00", "#ff0066", "#9013fe"],
+  },
+  { id: "orchid", angle: 150, stops: ["#ffb8f0", "#8b2fe0", "#ff0074"] },
+  { id: "lagoon", angle: 160, stops: ["#00a3f5", "#00c9a7", "#1cd760", "#ffb300"] },
+  { id: "citrus", angle: 135, stops: ["#ff1f5c", "#ff7a00", "#ffd83d"] },
+  { id: "violet", angle: 135, stops: ["#00aaff", "#7b2ff7", "#c400c4"] },
 ];
 
 const stage = document.getElementById("stage");
